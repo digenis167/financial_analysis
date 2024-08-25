@@ -34,6 +34,7 @@ pandas==2.2.2
 peewee==3.17.6
 pillow==10.4.0
 platformdirs==4.2.2
+plotly==5.23.0
 protobuf==5.27.3
 pyarrow==17.0.0
 pydantic==2.8.2
