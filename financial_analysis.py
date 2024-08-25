@@ -1,6 +1,6 @@
 import streamlit as st
 import yfinance as yf
-import datetime
+# import datetime
 from dateutil.relativedelta import relativedelta
 from openai import OpenAI
 import pandas as pd
@@ -26,8 +26,8 @@ st.set_page_config(layout='wide')
 st.title('Interactive Financial Stock Market Comperative Analysis Tool')
 
 # Set Default Date Range and Display date_input
-end_date = datetime.date.today()
-start_date = end_date - relativedelta(months=6)
+# end_date = datetime.date.today()
+# start_date = end_date - relativedelta(months=6)
 
 # Setup User input text boxes with defaults as AAPL and GOOGL
 st.sidebar.header('User Input Options')
@@ -35,8 +35,8 @@ selected_stock = st.sidebar.text_input('Enter Stock Ticker', 'AAPL').upper()
 selected_stock2 = st.sidebar.text_input('Enter Stock Ticker 2', 'GOOGL').upper()
 
 # Query Stock Data
-stock_data = get_stock_data(selected_stock, start_date, end_date) #, selected_date[0], selected_date[1])
-stock_data2 = get_stock_data(selected_stock2, start_date, end_date) #, selected_date[0], selected_date[1])
+stock_data = get_stock_data(selected_stock)
+stock_data2 = get_stock_data(selected_stock2)
 
 # Create 2 columns for displaying the data
 col1, col2 = st.columns(2)
